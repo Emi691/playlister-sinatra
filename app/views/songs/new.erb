@@ -7,22 +7,13 @@
     <form action="/songs" method="POST">
         <h3>Name:<input type="text" name="song[name]" id="Name" value="Name"></h3>
 
-       <p></p>
-        <%Artist.all.each do |artist|%>
-         <p><input type="checkbox" id="<%=artist.name%>" name="artists[]" value="<%=artist.id%>"><%=artist.name%></p>
-         <%end%>
-
         <h3>New Artist:</h3>
             <p><input type="text" id="Artist Name" name="artist[name]"></p>
-
         <p>Genres:</p>
          <%Genre.all.each do |genre|%>
-         <p><input id="<%=genre.name%>" type="checkbox" name="genres[]" value="<%=genre.id%>"><%=genre.name%></p>
+         <p><input id="<%=genre.name%>" type="checkbox" name="genre[]" value="<%=genre.id%>"><%=genre.name%></p>
          <%end%>
 
-        <h3>New Genre:</h3>
-            <p><input type="text" id="Genre Name" name="genre[name]"></p>
-            
          <input type="submit" value="Create Song">
     </form>
   </body>
